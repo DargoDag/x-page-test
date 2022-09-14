@@ -6,7 +6,6 @@
 # Node artifact files
 /node_modules
 /package-lock.json
-/gulpfile.js
 
 # production
 /dist
