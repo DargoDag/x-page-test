@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  max-width: 1560px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+body.modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: $main-bg;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+%text {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $black-color;
+}
+
+// call -   { @extend %text; }

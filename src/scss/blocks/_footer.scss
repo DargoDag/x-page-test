@@ -1,0 +1,33 @@
+.footer {
+  background-color: $white-color;
+
+  &__bottom {
+    padding: 47px 0 49px 0;
+    border-top: 2px solid $main-color;
+    color: $main-color;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+
+    & a:hover {
+      color: $black-color;
+    }
+  }
+
+  .socials {
+    padding: 59px 0 54px 0;
+  }
+
+  .socials__list {
+    margin-top: 16px;
+  }
+
+  .socials__title {
+    font-size: 24px;
+    line-height: 27px;
+  }
+}

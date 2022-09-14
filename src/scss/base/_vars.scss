@@ -1,0 +1,27 @@
+// Colors
+$white-color: #ffffff;
+$black-color: #000000;
+
+$main-color: #373334;
+$accent-color: #9F0023;
+$main-bg: #E5E5E5;
+
+// Breakpoints
+$desktopM: 2560px;
+$desktopS: 1920px;
+$desktop: 1680px;
+$laptopS: 1440px;
+$laptop: 1280px;
+$tabletS: 1024px;
+$tablet: 768px;
+$mobileS: 480px;
+$mobile: 375px;
+
+$desktopS__max: max-width 2559px;
+$desktop__max: max-width 1919px;
+$laptopS__max: max-width 1679px;
+$laptop__max: max-width 1439px;
+$tabletS__max: max-width 1279px;
+$tablet__max: max-width 1023px;
+$mobileS__max: max-width 767px;
+$mobile__max: max-width 479px;

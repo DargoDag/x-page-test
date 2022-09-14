@@ -1,0 +1,289 @@
+.detail {
+  &__title {
+    font-size: 52px;
+    line-height: 65px;
+
+    margin-top: 52px;
+
+    @media screen and (max-width: $tabletS) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    @media screen and (max-width: $mobileS) {
+      margin-top: 24px;
+    }
+  }
+
+  &__headline {
+    display: flex;
+
+    padding: 12px;
+    margin-top: 63px;
+
+    border-bottom: 2px solid $main-color;
+
+    @media screen and (max-width: $tabletS) {
+      margin-top: 28px;
+    }
+
+  }
+
+  &__wrapper {
+    max-width: 65.6%;
+
+    @media screen and (max-width: $laptop) {
+      max-width: 100%;
+    }
+  }
+
+  .headline {
+    margin-right: 40px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #9F0023;
+  }
+
+  .breadcrumbs {
+    margin-top: 16px;
+  }
+
+  &__bottom {
+    display: flex;
+
+
+    @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__name {
+    padding: 24px 0 14px 0;
+    border-bottom: 2px solid $main-color;
+
+    @media screen and (max-width: $tablet) {
+      padding: 12px 0 7px 0;
+    }
+  }
+
+  &__value {
+    padding: 14px 0;
+
+    display: flex;
+
+
+    @media screen and (max-width: $tablet) {
+      padding: 7px 0;
+    }
+
+    &.author {
+      font-weight: 700;
+    }
+
+    li:not(:last-child) {
+      margin-right: 14px;
+
+      &:after {
+        content: "/";
+        width: auto;
+        background-color: var(--gray1);
+        position: absolute;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  &__column {
+
+    &:not(:last-child) {
+      width: 100%;
+      max-width: 339px;
+      margin-right: 39px;
+    }
+
+    &:last-child {
+      width: 100%;
+      max-width: 208px;
+    }
+  }
+
+  .date {
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .headline {
+
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+}
+
+.comment {
+  background-color: #373334;
+  color: $white-color;
+  padding: 90px 108px;
+  margin-top: 112px;
+
+  @media screen and (max-width: $tabletS) {
+    padding: 48px 36px;
+    margin-top: 48px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: 32px 0;
+  }
+
+  &__wrapper {
+    max-width: 65.6%;
+
+    @media screen and (max-width: $laptop) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 52px;
+    line-height: 65px;
+    font-weight: 700;
+
+    margin-bottom: 42px;
+
+
+    @media screen and (max-width: $tablet) {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+  }
+
+  .input {
+    margin-right: 50px;
+    width: 100%;
+
+    padding: 12px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $white-color;
+    color: $white-color;
+    font-size: 16px;
+    line-height: 21px;
+
+    @media screen and (max-width: $tablet) {
+      padding: 6px;
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-top: 12px;
+    }
+
+    &::placeholder {
+      color: $white-color;
+    }
+  }
+
+  .inputs-row {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 36px;
+
+    @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  }
+
+  .attach-btn {
+    display: flex;
+    white-space: nowrap;
+    padding: 12px;
+
+    @media screen and (max-width: $tablet) {
+      margin-top: 12px;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+
+  margin: 43px 0 29px;
+
+
+  @media screen and (max-width: $tabletS) {
+    margin: 24px 0 16px;
+  }
+}
+
+video {
+  margin: 52px 0 48px 0;
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+
+  & span {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #959595;
+  }
+
+  & p {
+    margin: 48px 0;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+
+
+    @media screen and (max-width: $tablet) {
+      margin: 24px 0;
+    }
+  }
+}
+
+figcaption {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+blockquote {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 26px;
+  padding-bottom: 46px;
+  border-bottom: 2px solid $main-color;
+
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: 24px;
+    margin-top: 14px;
+  }
+}
+
+.btn-submit {
+  padding: 16px 40px;
+  border: 2px solid $white-color;
+  border-radius: 56px;
+  margin-top: 82px;
+
+  @media screen and (max-width: $tablet) {
+    margin-top: 32px;
+    padding: 8px 20px;
+  }
+}

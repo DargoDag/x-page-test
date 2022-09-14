@@ -1,0 +1,17 @@
+@use "sass:math";
+
+// libs
+@import "libs/normalize";
+@import "libs/datapicker";
+@import "libs/dropdown";
+
+// base
+@import "base/fonts";
+@import "base/layout";
+
+// blocks
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/footer";
+// pages
+@import "pages/detail";

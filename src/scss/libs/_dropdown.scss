@@ -1,0 +1,141 @@
+$tablet: 768px;
+
+@mixin breakpoint($point) {
+  @if $point ==untilTablet {
+    @media (max-width: calc($tablet - 1)) {
+      @content;
+    }
+  }
+
+  @else if $point ==tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+}
+
+.dropdown {
+  width: 468px;
+  font-family: 'FrankNew', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #373334;
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  @include breakpoint(tablet) {
+    width: 468px;
+  }
+
+  &__switch:checked+&__options-filter &__select {
+    transform: scaleY(1);
+    font-family: 'FrankNew', Arial, sans-serif;
+  }
+
+  &__switch:checked+&__options-filter &__filter:after {
+    transform: rotate(-135deg);
+    font-family: 'FrankNew', Arial, sans-serif;
+    font-size: 40px;
+  }
+
+  &__options-filter {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__filter {
+    position: relative;
+    display: flex;
+    padding: 24px;
+    color: #595959;
+    background-color: #fff;
+    border: 2px solid #373334;
+    font-size: 16px;
+    transition: .3s;
+
+    &::after {
+      position: absolute;
+      top: 45%;
+      right: 20px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #595959;
+      border-bottom: 2px solid #595959;
+      transform: rotate(45deg) translateX(-45%);
+      transition: .2s ease-in-out;
+    }
+  }
+
+  &__select {
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    width: 101%;
+    max-height: 252px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-shadow: 0 5px 10px 0 rgba(152, 152, 152, 0.6);
+    transform: scaleY(0);
+    transform-origin: top;
+    font-weight: 300;
+    transition: .2s ease-in;
+    margin: 0;
+    margin-top: 2px;
+    border: 2px solid #373334;
+    border-top: 0;
+    font-family: 'FrankNew', Arial, sans-serif;
+    font-weight: 600;
+    padding: 10px 0;
+    background-color: #fff;
+
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      /* change me to blue to match the background */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #373334;
+      border: 5px white solid;
+      /* change border color to blue to match the background */
+    }
+  }
+
+  &__select-option {
+    padding: 10px 24px;
+    background-color: #fff;
+    transition: .3s;
+    font-family: 'FrankNew', Arial, sans-serif;
+    font-weight: 600;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      color: #9F0023;
+      cursor: pointer;
+    }
+
+    &.disabled {
+      color: #959595;
+
+      &:hover {
+        color: #959595;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
