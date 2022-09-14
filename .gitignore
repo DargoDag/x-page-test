@@ -11,9 +11,6 @@
 # production
 /dist
 
-# gulp
-/gulp
-
 # Log files
 *.log
 
